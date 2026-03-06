@@ -1,6 +1,6 @@
 # Avalanche Build Games Submission Manifest
 
-- Last updated: 2026-03-05
+- Last updated: 2026-03-06
 - Track: Avalanche Build Games (Infrastructure)
 - Scope: CityChain Kit demoability upgrade (strict proof + 3 quest loops + validator/embed + explorer-link/hash evidence)
 - Primary demo surface: `/citychain/smallville` with proof-authoritative handoff to `/citychain/judge`
@@ -38,6 +38,18 @@ Unified judge bundle:
 scripts/challenges/run_citychain_judge_demo.sh
 ```
 
+## Public links
+- Submission mirror repo:
+  - `https://github.com/stabletown-xyz/citychain-build-games`
+- Demo walkthrough script:
+  - `https://github.com/stabletown-xyz/citychain-build-games/blob/main/docs/challenges/avalanche-build-games/demo-script.md`
+- Runbook:
+  - `https://github.com/stabletown-xyz/citychain-build-games/blob/main/docs/challenges/avalanche-build-games/runbook.md`
+- Submission checklist:
+  - `https://github.com/stabletown-xyz/citychain-build-games/blob/main/docs/challenges/avalanche-build-games/submission-checklist.md`
+- Submission manifest:
+  - `https://github.com/stabletown-xyz/citychain-build-games/blob/main/docs/challenges/avalanche-build-games/submission-manifest.md`
+
 ## Latest closure run (America/Denver)
 
 - 2026-03-05 14:27:20 MST: deterministic command passed.
@@ -47,9 +59,10 @@ scripts/challenges/run_citychain_judge_demo.sh
   - Summary file: `chainkit/out/citychain-bootstrap-summary.json`
   - Observed: `proof_mode=fuji_onchain`, `proof_validated=true`, `competition_grade=true`
   - Explorer base: `https://testnet.snowtrace.io`
-- Pending refresh for this closure slice:
-  - strict recording-ready command with required proof slots attached.
-  - unified judge bundle command output.
+- 2026-03-05 20:49:15 MST: strict judge bundle command passed with required proof slots attached.
+  - Command: `PORT=4001 CITYCHAIN_RUN_LOCAL_L1=0 CITYCHAIN_RECORDING_READY=0 CITYCHAIN_STRICT=1 CITYCHAIN_NETWORK=fuji ./scripts/challenges/run_citychain_judge_demo.sh`
+  - Bundle file: `chainkit/out/citychain_judge_demo_bundle.json`
+  - Observed: `required_slots.contract_page|quest_claim_tx|redemption_chain_settlement_tx all attached=true`
 
 ## Current strict artifact status
 
@@ -90,12 +103,12 @@ Artifact files:
 8. Matching tx hashes across summary + deploy/receipt artifacts.
 
 ### Latest strict explorer links
-- Contract (`redemption`):
-  - `https://testnet.snowtrace.io/address/0x4cA700338DC3df676c59D0102aF805Fc84E35b34`
+- Contract (`quest_manager`):
+  - `https://testnet.snowtrace.io/address/0xBBBFF8451a548a6A75CaCb8e26eFfCA03374DD6A`
 - Flow tx (`quest_claim`):
-  - `https://testnet.snowtrace.io/tx/0xca29b3cbda2d7f88cc974e0c8876aafa0559ea9fb0860fced9ce68164de90d02`
+  - `https://testnet.snowtrace.io/tx/0x9020b70bf46ec089af66626b758fe077c0bb521232af6dac805b2ace95cdb356`
 - Flow tx (`redemption_chain_settlement`):
-  - `https://testnet.snowtrace.io/tx/0x7386bc4146a709e0107d52f356b9dd80939e6e2fa27f72710b99588d532e07d5`
+  - `https://testnet.snowtrace.io/tx/0xdc39b181232e0502d94db1c95d9b05898f2ef4625738122ac7102b730de28231`
 
 ## Platform integrity checks
 - Tenant-scoped API writes
@@ -104,13 +117,9 @@ Artifact files:
 - Outbox events present
 - Canonical redemption/ledger behavior unchanged
 
-## Remaining winner-grade closure action
+## Winner-grade closure status
 
-Attach required proof slots with explorer links + hash/address references:
-- `contract_page` (`reference.contract_address`)
-- `quest_claim_tx` (`reference.tx_hash`)
-- `redemption_chain_settlement_tx` (`reference.tx_hash`)
-
-Attach via:
-- `POST /api/v1/chains/:id/evidence` or `/citychain/judge`
-- optional `screenshot_uri` metadata for deck/video packaging
+Closed:
+- required proof slots attached in strict judge bundle
+- strict Fuji artifacts validated by mirror verifier
+- submission mirror published with verifier + checksums
