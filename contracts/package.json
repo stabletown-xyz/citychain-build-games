@@ -1,0 +1,27 @@
+{
+  "name": "stabletown-munus-contracts",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Hardhat workspace for Hedera deployable Munus bond contracts",
+  "scripts": {
+    "compile": "hardhat compile",
+    "test": "hardhat test",
+    "lint": "hardhat compile",
+    "deploy:factory": "hardhat run scripts/deploy_factory.ts",
+    "deploy:hts": "hardhat run scripts/deploy_mode_hts.ts",
+    "deploy:evm": "hardhat run scripts/deploy_mode_evm.ts",
+    "execute:control": "hardhat run scripts/execute_control.ts",
+    "query:receipt": "hardhat run scripts/query_receipt.ts",
+    "deploy:citychain": "hardhat run scripts/deploy_citychain.ts",
+    "seed:citychain": "hardhat run scripts/seed_citychain.ts",
+    "query:citychain": "hardhat run scripts/query_citychain.ts"
+  },
+  "devDependencies": {
+    "@hashgraph/sdk": "^2.72.0",
+    "@nomicfoundation/hardhat-toolbox": "^4.0.0",
+    "@types/node": "^22.10.2",
+    "hardhat": "^2.20.1",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.7.2"
+  }
+}

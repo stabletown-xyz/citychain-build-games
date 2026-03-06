@@ -1,0 +1,26 @@
+{
+  "source_repo_url": "https://github.com/stabletown-xyz/stabletown",
+  "source_ref": "WORKTREE",
+  "source_sha": "WORKTREE",
+  "exported_at": "2026-03-06T03:56:06Z",
+  "mode": "sync",
+  "strict_artifacts": "required",
+  "includes": [
+    "chainkit/*",
+    "contracts/{contracts,scripts,hardhat.config.ts}",
+    "docs/challenges/avalanche-build-games/*",
+    "docs/api/v1.md (CityChain extract)",
+    "docs/events.md (CityChain extract)",
+    "artifacts/*",
+    "frontend/citychain-judge-console/*",
+    "scripts/*"
+  ],
+  "excludes": [
+    "apps/**",
+    "sdk/**",
+    "frontend/operator-console/**",
+    "scripts/challenges/*.exs",
+    "non-CityChain contracts",
+    "real .env files"
+  ]
+}

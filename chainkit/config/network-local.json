@@ -1,0 +1,6 @@
+{
+  "network": "local",
+  "rpc_url": "http://127.0.0.1:9650/ext/bc/C/rpc",
+  "evm_chain_id": 43112,
+  "hardhat_network": "hardhat"
+}

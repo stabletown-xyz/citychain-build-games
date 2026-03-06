@@ -1,0 +1,14 @@
+# General
+.DS_Store
+*.log
+
+# Node
+node_modules/
+dist/
+coverage/
+
+# Local env files
+.env*
+
+# Build cache
+tmp/

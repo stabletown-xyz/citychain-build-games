@@ -1,0 +1,28 @@
+{
+  "generated_at": "2026-03-06T03:49:15Z",
+  "explorer_base_url": "https://testnet.snowtrace.io",
+  "links": {
+    "contracts": {
+      "institution_registry": "https://testnet.snowtrace.io/address/0xb3062725E2Cb77fe0C66B26A72c1B1b40Da32821",
+      "merchant_registry": "https://testnet.snowtrace.io/address/0x14bd0d4AeBD4ee23E7Bcf12E816eb5e151a0B36a",
+      "quest_manager": "https://testnet.snowtrace.io/address/0xBBBFF8451a548a6A75CaCb8e26eFfCA03374DD6A",
+      "attestation_verifier": "https://testnet.snowtrace.io/address/0x2b59D4a26b79Bf705E25bEAdca515aC244bBEf03",
+      "rewards_token": "https://testnet.snowtrace.io/address/0xFc8f121463a0c726b1100F9dAdc370d4711F9e53",
+      "redemption": "https://testnet.snowtrace.io/address/0x3cA5C1D61C14bd071a26e6616597D1b5950bc2ed"
+    },
+    "txs": {
+      "deploy": {
+        "institution_registry": "https://testnet.snowtrace.io/tx/0xfb921b42b15f97abf174e03e02ce05b2196101fa7e97ed78df58cb01c34b4c83",
+        "merchant_registry": "https://testnet.snowtrace.io/tx/0x24ccc3313d1e4a9d04426e3b7abd5f01f36fcfc0f217a6ee5f21a174cd944615",
+        "quest_manager": "https://testnet.snowtrace.io/tx/0xc0d83e67ed9d9b72863382890aaa8a00c09deb2c600e1bc51d21df97e6b51f02",
+        "attestation_verifier": "https://testnet.snowtrace.io/tx/0xc3e99707a4fe1f809bc906e84557e74178d3b08eedbe28c1236c89099ea97484",
+        "rewards_token": "https://testnet.snowtrace.io/tx/0xc8602ffc14ed806eb5c022596cf42fa101859af4cc2a78381ad6f696c004fede",
+        "redemption": "https://testnet.snowtrace.io/tx/0x8c779f86c70fc34a813476fb8682f71ab5aeac90992122036d1b91dc90060bf7"
+      },
+      "flow": {
+        "quest_claim": "https://testnet.snowtrace.io/tx/0x9020b70bf46ec089af66626b758fe077c0bb521232af6dac805b2ace95cdb356",
+        "redemption_chain_settlement": "https://testnet.snowtrace.io/tx/0xdc39b181232e0502d94db1c95d9b05898f2ef4625738122ac7102b730de28231"
+      }
+    }
+  }
+}

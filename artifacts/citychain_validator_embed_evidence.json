@@ -1,0 +1,35 @@
+{
+  "captured_at": "2026-03-06T03:48:16Z",
+  "chain_id": "11111111-1111-4111-8111-11111111111a",
+  "embed": {
+    "embed_session_id": "58d73d99-c359-4f6f-9ada-d0d7eb05d46d",
+    "embedded_client_id": "b3240b39-581a-4957-8cc1-6c17ad023fe6",
+    "expires_at": "2026-03-06T04:48:16.000000Z",
+    "partner_api_key_id": "305258d1-b5e9-46de-afc5-8a458d3cd36a",
+    "partner_organization_id": "ab7088fe-e75f-45d7-8dfe-9d46e5192429",
+    "status": "active"
+  },
+  "participant_id": "11111111-1111-4111-8111-111111111113",
+  "program_id": "11111111-1111-4111-8111-111111111112",
+  "tenant_id": "11111111-1111-4111-8111-111111111111",
+  "validator": {
+    "governance": {
+      "allowlist_policy": "managed",
+      "gas_sponsorship_mode": "sponsored",
+      "permissioning_mode": "permissioned"
+    },
+    "validator_count": 2,
+    "validators": [
+      {
+        "name": "City Node 1",
+        "role": "consensus",
+        "status": "active"
+      },
+      {
+        "name": "City Node 2",
+        "role": "observer",
+        "status": "standby"
+      }
+    ]
+  }
+}

@@ -1,0 +1,104 @@
+:root {
+  font-family: "IBM Plex Sans", "Segoe UI", sans-serif;
+  color: #0f172a;
+  background: linear-gradient(160deg, #f8fafc 0%, #e2e8f0 100%);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+}
+
+a {
+  color: #075985;
+}
+
+.app-shell {
+  margin: 0 auto;
+  max-width: 1000px;
+  padding: 1rem;
+}
+
+.topbar {
+  border-radius: 16px;
+  background: linear-gradient(120deg, #0f172a 0%, #1e3a8a 55%, #0e7490 100%);
+  color: #f8fafc;
+  padding: 1rem;
+}
+
+.topbar h1 {
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+.topbar p {
+  margin: 0.25rem 0 0;
+  opacity: 0.9;
+}
+
+.nav-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 0.75rem;
+}
+
+.nav-link {
+  border-radius: 999px;
+  border: 1px solid #bfdbfe;
+  padding: 0.4rem 0.8rem;
+  color: #dbeafe;
+  text-decoration: none;
+}
+
+.nav-link-active {
+  background: #dbeafe;
+  color: #0f172a;
+}
+
+.content {
+  margin-top: 1rem;
+}
+
+.panel {
+  background: #ffffffcc;
+  border: 1px solid #cbd5e1;
+  border-radius: 16px;
+  padding: 1rem;
+}
+
+.kv {
+  display: grid;
+  gap: 0.4rem;
+}
+
+.kv div {
+  display: grid;
+  grid-template-columns: 220px 1fr;
+}
+
+.kv dt {
+  font-weight: 700;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th,
+td {
+  border: 1px solid #cbd5e1;
+  padding: 0.5rem;
+  text-align: left;
+}
+
+@media (max-width: 700px) {
+  .kv div {
+    grid-template-columns: 1fr;
+  }
+}

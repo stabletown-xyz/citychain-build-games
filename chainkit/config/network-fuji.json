@@ -1,0 +1,6 @@
+{
+  "network": "fuji",
+  "rpc_url": "https://api.avax-test.network/ext/bc/C/rpc",
+  "evm_chain_id": 43113,
+  "hardhat_network": "avalanche_fuji"
+}
