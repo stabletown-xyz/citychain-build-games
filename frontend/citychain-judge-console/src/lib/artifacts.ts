@@ -1,4 +1,9 @@
-import type { CitychainBootstrapSummary, JudgeBundle } from "../types/citychain";
+import type {
+  CitychainBootstrapSummary,
+  JudgeBundle,
+  ThreeLoopEvidence,
+  ValidatorEmbedEvidence,
+} from "../types/citychain";
 
 function normalizeBasePath(value: string | undefined): string {
   if (!value || value.trim() === "") {
@@ -45,4 +50,12 @@ export async function loadBootstrapSummary(): Promise<CitychainBootstrapSummary 
 
 export async function loadJudgeBundle(): Promise<JudgeBundle | null> {
   return fetchJson<JudgeBundle>(`${artifactsBase}/citychain_judge_demo_bundle.json`);
+}
+
+export async function loadThreeLoopEvidence(): Promise<ThreeLoopEvidence | null> {
+  return fetchJson<ThreeLoopEvidence>(`${artifactsBase}/citychain_three_loop_evidence.json`);
+}
+
+export async function loadValidatorEmbedEvidence(): Promise<ValidatorEmbedEvidence | null> {
+  return fetchJson<ValidatorEmbedEvidence>(`${artifactsBase}/citychain_validator_embed_evidence.json`);
 }

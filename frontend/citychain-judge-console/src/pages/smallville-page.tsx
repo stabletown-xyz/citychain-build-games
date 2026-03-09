@@ -1,14 +1,17 @@
 import { useEffect, useState } from "react";
-import { loadBootstrapSummary } from "../lib/artifacts";
-import type { CitychainBootstrapSummary } from "../types/citychain";
+import { Link } from "react-router-dom";
+import { loadBootstrapSummary, loadThreeLoopEvidence } from "../lib/artifacts";
+import type { CitychainBootstrapSummary, ThreeLoopEvidence } from "../types/citychain";
 
 const QUESTS = ["school_onboarding", "main_street_purchase", "community_volunteer"];
 
 export function SmallvillePage() {
   const [summary, setSummary] = useState<CitychainBootstrapSummary | null>(null);
+  const [threeLoop, setThreeLoop] = useState<ThreeLoopEvidence | null>(null);
 
   useEffect(() => {
     void loadBootstrapSummary().then(setSummary);
+    void loadThreeLoopEvidence().then(setThreeLoop);
   }, []);
 
   return (
@@ -25,6 +28,16 @@ export function SmallvillePage() {
           <li key={quest}>{quest}</li>
         ))}
       </ul>
+
+      <h3>Guided judge handoff</h3>
+      <p>
+        Judges should start here for narrative context, then run the full guided checks in{" "}
+        <Link to="/citychain/judge">Judge mode</Link>.
+      </p>
+      <p>
+        Captured mission loops: <strong>{threeLoop?.quest_loops?.length || 0}</strong>. Settlement intent:{" "}
+        <strong>{threeLoop?.redemption_settlement?.tx_intent_id || "missing"}</strong>.
+      </p>
 
       <h3>Strict context</h3>
       {summary ? (

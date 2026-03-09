@@ -71,6 +71,121 @@ a {
   padding: 1rem;
 }
 
+.guide-toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.guide-button {
+  border: 1px solid #0f766e;
+  background: #0f766e;
+  color: #f8fafc;
+  border-radius: 10px;
+  padding: 0.45rem 0.75rem;
+  cursor: pointer;
+}
+
+.guide-button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.guide-button-secondary {
+  background: #f8fafc;
+  color: #0f172a;
+  border-color: #94a3b8;
+}
+
+.guide-progress {
+  font-weight: 700;
+}
+
+.guide-status {
+  margin: 0.25rem 0 0.75rem;
+  color: #334155;
+}
+
+.guide-list {
+  margin: 0;
+  padding-left: 1.2rem;
+  display: grid;
+  gap: 0.75rem;
+}
+
+.guide-step {
+  border: 1px solid #cbd5e1;
+  border-radius: 12px;
+  background: #fff;
+  padding: 0.75rem;
+}
+
+.guide-step-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+}
+
+.guide-step h3 {
+  margin: 0;
+}
+
+.guide-detail {
+  color: #334155;
+  font-family: "IBM Plex Mono", "Menlo", monospace;
+  font-size: 0.9rem;
+}
+
+.guide-badge {
+  border-radius: 999px;
+  padding: 0.2rem 0.55rem;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+}
+
+.guide-badge-completed {
+  background: #dcfce7;
+  color: #166534;
+}
+
+.guide-badge-ready {
+  background: #dbeafe;
+  color: #1e3a8a;
+}
+
+.guide-badge-blocked {
+  background: #fee2e2;
+  color: #991b1b;
+}
+
+.guide-badge-locked {
+  background: #e2e8f0;
+  color: #334155;
+}
+
+.guide-step-completed {
+  border-color: #86efac;
+}
+
+.guide-step-ready {
+  border-color: #93c5fd;
+}
+
+.guide-step-blocked {
+  border-color: #fca5a5;
+}
+
+.guide-success {
+  margin-top: 0.75rem;
+  font-weight: 700;
+  color: #166534;
+}
+
 .kv {
   display: grid;
   gap: 0.4rem;
