@@ -1,6 +1,17 @@
 import type { CitychainBootstrapSummary, JudgeBundle } from "../types/citychain";
 
-const artifactsBase = (import.meta.env.VITE_ARTIFACTS_BASE as string | undefined)?.replace(/\/+$/, "") || "/artifacts";
+function normalizeBasePath(value: string | undefined): string {
+  if (!value || value.trim() === "") {
+    return "";
+  }
+
+  const trimmed = value.trim().replace(/\/+$/, "");
+  return trimmed === "/" ? "" : trimmed;
+}
+
+const configuredArtifactsBase = normalizeBasePath(import.meta.env.VITE_ARTIFACTS_BASE as string | undefined);
+const routerBase = normalizeBasePath(import.meta.env.BASE_URL as string | undefined);
+const artifactsBase = configuredArtifactsBase || `${routerBase}/artifacts`;
 
 export function normalizeTxHash(value: string | null | undefined): string | null {
   if (!value) {
