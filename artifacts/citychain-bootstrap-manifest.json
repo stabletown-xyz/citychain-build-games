@@ -1,7 +1,7 @@
 {
   "version": "citychain-kit-v0.1",
-  "tenant_id": "0fe6d4fb-038b-499f-88db-7c549e75a5a7",
-  "chain_id": "92b2e545-5caf-4c52-9f05-beefffb0c5e0",
+  "tenant_id": "41fde65c-3df3-4314-bf28-cf324e1b0c2c",
+  "chain_id": "4da704ee-fe75-4596-98c4-2a409f9584e3",
   "network": "local",
   "strict": false,
   "proof_mode": "deterministic",
@@ -12,9 +12,9 @@
   "deploy_tx_hashes": {},
   "flow_tx_hashes": {},
   "explorer_links": {},
-  "generated_at": "2026-03-07T18:50:23Z",
-  "contracts": {"institution_registry":"0xc0b4e0d54db78435a09c5b6c395fcefde8fda562","merchant_registry":"0xde7960090263c8b417053af15b4ee2ac71f92315","quest_manager":"0x7e96e1b919cae5f163d8c69da6a7987e8029f49d","attestation_verifier":"0x6c3fe50c74141f3fc1775f66664a9735693263fa","rewards_token":"0x771fb8dd0c9f3fa608a1430fc1fd36e431374b2b","redemption":"0x7c42f13aee6097374062b7712ca410472cf76ad3"},
-  "seeded_roles": {"admin":"0x7d7e522f9508b7b9994fb3c080729cefc2c9744b","institutions":{"city":"0xd0d4b5d02acaed087ba550053b20571a15249b3c","university":"0x8abe015d0b974cd9696153cde10df57b957e9c61"},"merchants":{"demo_merchant":"0x3059b21e97465f25b7ae832817a2d39e553e3976"},"residents":{"demo_resident":"0x784b4ec352dcc4ad5fc526dcbe1b092aa3cbf954"}},
+  "generated_at": "2026-03-09T19:03:43Z",
+  "contracts": {"institution_registry":"0x7e2b62898d0105639661494193de9178def22ecd","merchant_registry":"0xbaecb449bb544c79856fbd78e3b577de96a70036","quest_manager":"0xfcd48f112fed074fa564558349ffd91eafe758d0","attestation_verifier":"0x7f1000506b94d4099e13cc0e38bd05507a7bf725","rewards_token":"0x089d049fc2d35417a096df2754db0b18d5049c7b","redemption":"0x305b3b9622fa63a58a0883997e8f0e1ebb8d4f22"},
+  "seeded_roles": {"admin":"0xa26e1cc5a950bd07fa443b21562310ecf6ab6370","institutions":{"city":"0xc9511be1fa3b78ba630bfb22730d4c60a02ac32f","university":"0x42682a2c9b1d9af987c9a7296dcde51eec0d0a48"},"merchants":{"demo_merchant":"0x7bc9d8b647190212fe9967495b07047887f74611"},"residents":{"demo_resident":"0x85682339883b364963089cc07a8d259f68353e46"}},
   "deploy_receipts": {},
   "flow_receipts": {}
 }

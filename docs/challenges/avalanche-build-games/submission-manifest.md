@@ -42,6 +42,8 @@ scripts/challenges/run_citychain_judge_demo.sh
 ## Public links
 - Submission mirror repo:
   - `https://github.com/stabletown-xyz/citychain-build-games`
+- Live MVP site (GitHub Pages):
+  - `https://stabletown-xyz.github.io/citychain-build-games/`
 - Walkthrough video (required by Stage 2):
   - `REPLACE_WITH_WALKTHROUGH_VIDEO_URL`
 - Demo walkthrough script:
@@ -54,8 +56,9 @@ scripts/challenges/run_citychain_judge_demo.sh
   - `https://github.com/stabletown-xyz/citychain-build-games/blob/main/docs/challenges/avalanche-build-games/submission-checklist.md`
 - Submission manifest:
   - `https://github.com/stabletown-xyz/citychain-build-games/blob/main/docs/challenges/avalanche-build-games/submission-manifest.md`
-- Optional live MVP URL:
-  - `NOT_DEPLOYED_IN_THIS_CUT`
+- Live MVP route pointers:
+  - `https://stabletown-xyz.github.io/citychain-build-games/citychain/smallville`
+  - `https://stabletown-xyz.github.io/citychain-build-games/citychain/judge`
 
 ## Latest closure run (America/Denver)
 

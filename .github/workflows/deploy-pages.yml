@@ -1,0 +1,69 @@
+name: Deploy Live MVP Site
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+    paths:
+      - "frontend/citychain-judge-console/**"
+      - "artifacts/**"
+      - ".github/workflows/deploy-pages.yml"
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: "npm"
+          cache-dependency-path: frontend/citychain-judge-console/package-lock.json
+
+      - name: Install dependencies
+        run: npm --prefix frontend/citychain-judge-console ci
+
+      - name: Bake artifacts into static site
+        run: |
+          mkdir -p frontend/citychain-judge-console/public/artifacts
+          rsync -a --delete artifacts/ frontend/citychain-judge-console/public/artifacts/
+
+      - name: Build static site
+        run: VITE_BASE_PATH=/citychain-build-games/ npm --prefix frontend/citychain-judge-console run build
+
+      - name: Enable SPA fallback for GitHub Pages
+        run: |
+          cp frontend/citychain-judge-console/dist/index.html frontend/citychain-judge-console/dist/404.html
+          touch frontend/citychain-judge-console/dist/.nojekyll
+
+      - name: Setup Pages
+        uses: actions/configure-pages@v5
+
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: frontend/citychain-judge-console/dist
+
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

@@ -28,6 +28,14 @@ Narrative route order:
 2. `/citychain/judge`
 3. `/citychain/proof`
 
+## Live MVP Site (GitHub Pages)
+- URL: `https://stabletown-xyz.github.io/citychain-build-games/`
+- Primary lane: `https://stabletown-xyz.github.io/citychain-build-games/citychain/smallville`
+- Proof lane: `https://stabletown-xyz.github.io/citychain-build-games/citychain/judge`
+- Notes:
+  - Artifacts are baked from `artifacts/*` during deploy.
+  - Snowtrace/Fuji verification remains canonical for on-chain proof.
+
 ## Optional Strict Fuji Rerun
 Required:
 - `STABLETOWN_AVALANCHE_FUJI_PRIVATE_KEY`
@@ -68,9 +76,9 @@ See: `docs/challenges/avalanche-build-games/pitch-proof-matrix.md`
 
 ## Submission Metadata
 - Source repo: `https://github.com/stabletown-xyz/stabletown`
-- Source ref: `5290d78`
-- Source sha: `5290d78e291b49c2008e5b83932468ca922fc55c`
-- Exported at (UTC): `2026-03-09T17:41:38Z`
+- Source ref: `f491a7f`
+- Source sha: `f491a7f4d08dd3f9d7c5eac36254671e9e6c87f1`
+- Exported at (UTC): `2026-03-09T19:25:34Z`
 - Track: Avalanche Build Games (Infrastructure)
 - Submission mirror: `https://github.com/stabletown-xyz/citychain-build-games`
 - Walkthrough video (required): `REPLACE_WITH_WALKTHROUGH_VIDEO_URL`
