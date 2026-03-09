@@ -100,6 +100,7 @@ export function JudgePage() {
   const claims = bundle?.flow_tx_intents?.claims || [];
   const settlement = bundle?.flow_tx_intents?.settlement || null;
   const questLoops = threeLoop?.quest_loops || [];
+  const flowReceipts = summary?.flow_receipts || {};
 
   const contractSlot = bundle?.required_slots?.find((slot) => slot.slot === "contract_page");
   const claimSlot = bundle?.required_slots?.find((slot) => slot.slot === "quest_claim_tx");
@@ -121,6 +122,17 @@ export function JudgePage() {
 
   const claimsConfirmedCount = claims.filter((item) => item.status === "confirmed").length;
   const settlementConfirmed = settlement?.status === "confirmed";
+  const strictClaimReceiptConfirmed = flowReceipts.quest_claim?.status === "confirmed";
+  const strictSettlementReceiptConfirmed = flowReceipts.redemption_chain_settlement?.status === "confirmed";
+  const hasTxIntentRecords = claims.length > 0 || !!settlement;
+  const txFinalityReady = hasTxIntentRecords
+    ? claimsConfirmedCount >= 3 && settlementConfirmed
+    : strictClaimReceiptConfirmed && strictSettlementReceiptConfirmed;
+  const txFinalityDetail = hasTxIntentRecords
+    ? `claims_confirmed=${claimsConfirmedCount}/3, settlement=${settlement?.status || "missing"}`
+    : `tx-intent records unavailable in mirror; strict receipts claim=${flowReceipts.quest_claim?.status || "missing"}, settlement=${
+        flowReceipts.redemption_chain_settlement?.status || "missing"
+      }`;
   const attachedSlots = useMemo(
     () => new Set((bundle?.required_slots || []).filter((slot) => slot.attached).map((slot) => slot.slot)),
     [bundle?.required_slots],
@@ -163,8 +175,8 @@ export function JudgePage() {
         id: "tx_finality",
         title: "Confirm tx-intent finality",
         description: "All claim intents and merchant settlement must be confirmed.",
-        ready: claimsConfirmedCount >= 3 && settlementConfirmed,
-        detail: `claims_confirmed=${claimsConfirmedCount}/3, settlement=${settlement?.status || "missing"}`,
+        ready: txFinalityReady,
+        detail: txFinalityDetail,
       },
       {
         id: "proof_triplet",
@@ -197,18 +209,17 @@ export function JudgePage() {
       bundle?.generated_at,
       claimHash,
       claimUrl,
-      claimsConfirmedCount,
       contractAddress,
       contractUrl,
       questLoops.length,
-      settlement?.status,
-      settlementConfirmed,
       settlementHash,
       settlementUrl,
       strict.competition_grade,
       strict.proof_mode,
       strict.proof_validated,
       summary,
+      txFinalityDetail,
+      txFinalityReady,
       threeLoop?.redemption_settlement?.tx_intent_id,
       validatorEmbed?.embed?.embed_session_id,
       validatorEmbed?.validator?.validator_count,
@@ -327,13 +338,15 @@ export function JudgePage() {
       <ul>
         {questLoops.map((loop, index) => {
           const claimIntent = claims[index];
-          const txHash = normalizeTxHash(claimIntent?.tx_hash);
+          const strictFallbackReceipt = index === 0 ? flowReceipts.quest_claim : undefined;
+          const txHash = normalizeTxHash(claimIntent?.tx_hash || strictFallbackReceipt?.tx_hash);
           const txUrl = claimIntent?.explorer_url || asTxExplorerUrl(explorerBaseUrl, txHash);
+          const status = claimIntent?.status || strictFallbackReceipt?.status || loop.claim_status || "n/a";
 
           return (
             <li key={`${loop.quest_type}-${loop.claim_tx_intent_id || index}`}>
               <strong>{questLabel(loop.quest_type)}</strong>: attestation={loop.quest_attestation_id || "n/a"}, claim_intent=
-              {loop.claim_tx_intent_id || "n/a"}, tx_hash={txHash || "n/a"}, status={claimIntent?.status || loop.claim_status || "n/a"}
+              {loop.claim_tx_intent_id || "n/a"}, tx_hash={txHash || "n/a"}, status={status}
               {txUrl ? (
                 <>
                   {" "}
@@ -347,7 +360,8 @@ export function JudgePage() {
         })}
         <li>
           <strong>Merchant settlement</strong>: intent={settlement?.tx_intent_id || threeLoop?.redemption_settlement?.tx_intent_id || "n/a"},
-          tx_hash={settlementHash || "n/a"}, status={settlement?.status || threeLoop?.redemption_settlement?.status || "n/a"}
+          tx_hash={settlementHash || "n/a"}, status=
+          {settlement?.status || flowReceipts.redemption_chain_settlement?.status || threeLoop?.redemption_settlement?.status || "n/a"}
           {(settlement?.explorer_url || settlementUrl) ? (
             <>
               {" "}

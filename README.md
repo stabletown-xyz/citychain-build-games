@@ -76,9 +76,9 @@ See: `docs/challenges/avalanche-build-games/pitch-proof-matrix.md`
 
 ## Submission Metadata
 - Source repo: `https://github.com/stabletown-xyz/stabletown`
-- Source ref: `36a239c`
-- Source sha: `36a239cf5f9a9b6adb50c2350c5384a60d74d57a`
-- Exported at (UTC): `2026-03-09T20:23:11Z`
+- Source ref: `1440bc2`
+- Source sha: `1440bc206ddadd30ad56ec975b2c22fd05562da8`
+- Exported at (UTC): `2026-03-09T20:29:25Z`
 - Track: Avalanche Build Games (Infrastructure)
 - Submission mirror: `https://github.com/stabletown-xyz/citychain-build-games`
 - Walkthrough video (required): `REPLACE_WITH_WALKTHROUGH_VIDEO_URL`

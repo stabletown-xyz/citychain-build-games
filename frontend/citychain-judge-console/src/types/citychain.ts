@@ -12,6 +12,20 @@ export interface CitychainBootstrapSummary {
     redemption_chain_settlement?: string;
     [key: string]: string | undefined;
   };
+  flow_receipts?: {
+    quest_claim?: {
+      tx_hash?: string;
+      status?: string;
+      block_number?: number;
+      gas_used?: string;
+    };
+    redemption_chain_settlement?: {
+      tx_hash?: string;
+      status?: string;
+      block_number?: number;
+      gas_used?: string;
+    };
+  };
   explorer_links?: {
     contracts?: Record<string, string>;
     txs?: {
