@@ -34,6 +34,7 @@ All events must follow this envelope:
 * `actor` required for admin/system-triggered actions (nullable for pure connector events if truly unknown)
 * `idempotency_key` required for money-adjacent events
 * `data` contains only event-specific fields (no giant raw provider payloads)
+* when tenant flag `cari_dvp_policy_metadata_enabled` is enabled, DvP-linked events may include additive `money_form_ref` and `settlement_intent_ref` maps in `data`
 
 ### Refactor contract note
 

@@ -41,6 +41,23 @@
 6. Show required proof-slot statuses as attached.
 7. Export judge evidence pointers payload.
 
+## Judge 5-minute lock (timestamped)
+1. `0:00-0:20` Hook: "Resident earns, merchant settles, all proven on Fuji."
+2. `0:20-1:40` Run `/citychain/smallville` end-to-end civic storyline.
+3. `1:40-3:10` Run `/citychain/judge` one-click flow and show tx finality.
+4. `3:10-4:00` Show Snowtrace triplet:
+   - contract: `0xBBBFF8451a548a6A75CaCb8e26eFfCA03374DD6A`
+   - claim tx: `0x9020b70bf46ec089af66626b758fe077c0bb521232af6dac805b2ace95cdb356`
+   - settlement tx: `0xdc39b181232e0502d94db1c95d9b05898f2ef4625738122ac7102b730de28231`
+5. `4:00-4:40` Run `./scripts/verify_submission_bundle.sh` and open `artifacts/citychain_judge_demo_bundle.json`.
+6. `4:40-5:00` Close on repeatability via `scripts/challenges/launch_citychain_city.sh`.
+
+## On-screen proof overlays (exact values)
+- `evm_chain_id=43113`
+- `contract_address=0xBBBFF8451a548a6A75CaCb8e26eFfCA03374DD6A`
+- `quest_claim_tx=0x9020b70bf46ec089af66626b758fe077c0bb521232af6dac805b2ace95cdb356`
+- `redemption_chain_settlement_tx=0xdc39b181232e0502d94db1c95d9b05898f2ef4625738122ac7102b730de28231`
+
 ## 3) Strict winner-proof pass (mandatory for final judging evidence)
 1. `CITYCHAIN_STRICT=1 chainkit/bootstrap.sh --network fuji`
 2. `CITYCHAIN_STRICT=1 ./scripts/challenges/smoke_avalanche_build_games.sh`

@@ -33,6 +33,7 @@ docs/challenges/avalanche-build-games/00-description-100-words.md
 docs/challenges/avalanche-build-games/city-launch-playbook.md
 docs/challenges/avalanche-build-games/deck-outline.md
 docs/challenges/avalanche-build-games/demo-script.md
+docs/challenges/avalanche-build-games/judge-quick-proof.md
 docs/challenges/avalanche-build-games/pitch-proof-matrix.md
 docs/challenges/avalanche-build-games/runbook.md
 docs/challenges/avalanche-build-games/submission-checklist.md

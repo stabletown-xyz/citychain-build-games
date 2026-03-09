@@ -11,6 +11,7 @@
 - Deck outline: `deck-outline.md`
 - Runbook: `runbook.md`
 - Checklist: `submission-checklist.md`
+- Judge quick proof: `judge-quick-proof.md`
 
 ## Verification commands
 
@@ -41,14 +42,20 @@ scripts/challenges/run_citychain_judge_demo.sh
 ## Public links
 - Submission mirror repo:
   - `https://github.com/stabletown-xyz/citychain-build-games`
+- Walkthrough video (required by Stage 2):
+  - `REPLACE_WITH_WALKTHROUGH_VIDEO_URL`
 - Demo walkthrough script:
   - `https://github.com/stabletown-xyz/citychain-build-games/blob/main/docs/challenges/avalanche-build-games/demo-script.md`
+- Judge quick proof:
+  - `https://github.com/stabletown-xyz/citychain-build-games/blob/main/docs/challenges/avalanche-build-games/judge-quick-proof.md`
 - Runbook:
   - `https://github.com/stabletown-xyz/citychain-build-games/blob/main/docs/challenges/avalanche-build-games/runbook.md`
 - Submission checklist:
   - `https://github.com/stabletown-xyz/citychain-build-games/blob/main/docs/challenges/avalanche-build-games/submission-checklist.md`
 - Submission manifest:
   - `https://github.com/stabletown-xyz/citychain-build-games/blob/main/docs/challenges/avalanche-build-games/submission-manifest.md`
+- Optional live MVP URL:
+  - `NOT_DEPLOYED_IN_THIS_CUT`
 
 ## Latest closure run (America/Denver)
 
