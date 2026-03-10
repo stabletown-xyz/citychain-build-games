@@ -1,22 +1,34 @@
 # CityChain Build Games Submission Mirror
 
 ## What This Repo Is
-This repository is the Avalanche Build Games submission package for CityChain Kit.
-It contains the Avalanche smart contracts, chain bootstrap/deploy tooling, CityChain-only judge demo UI, and strict Fuji proof artifacts.
-It is optimized for judge review speed and reproducible verification.
+This repository is the Build Games submission package for CityChain Kit.
+It contains Avalanche contracts, Fuji bootstrap/deploy tooling, a CityChain-only demo UI, and proof artifacts.
+The package is intentionally review-first: fast to validate, reproducible, and scoped to the Build Games surface.
+
+## What This Submission Proves
+- Contracts are deployed on Avalanche Fuji with verifiable deploy transaction hashes.
+- A civic flow executes end-to-end: 3 quest loops plus merchant settlement.
+- Required proof slots are attached for contract page, claim tx, and settlement tx.
+- Evidence is exported as deterministic JSON artifacts with checksums and provenance.
 
 ## What Is Open vs Closed
 Open in this repo: Avalanche contracts, chainkit scripts, CityChain judge demo UI, challenge docs, and proof artifacts.
 Closed in private Stabletown: multi-tenant system-of-record backend and broader product modules not required for Build Games judging.
 Rationale: judges need focused proof and reproducibility without proprietary platform internals.
 
-## Judge Quickstart (2 minutes)
+## Fast Verification Path (90 seconds)
 ```bash
 ./scripts/verify_submission_bundle.sh
 ```
 Then open:
-- `artifacts/fuji_explorer_links.json`
-- `frontend/citychain-judge-console` demo route `/citychain/smallville`
+1. `artifacts/fuji_explorer_links.json`
+2. `artifacts/citychain-bootstrap-summary.json`
+3. `artifacts/citychain_judge_demo_bundle.json`
+
+Expected strict values:
+- `proof_mode = fuji_onchain`
+- `proof_validated = true`
+- `competition_grade = true`
 
 ## Demo Quickstart (5 minutes)
 ```bash
@@ -33,6 +45,7 @@ Narrative route order:
 - Primary lane: `https://stabletown-xyz.github.io/citychain-build-games/#/citychain/smallville`
 - Proof lane: `https://stabletown-xyz.github.io/citychain-build-games/#/citychain/judge`
 - Notes:
+  - GitHub Pages deep links use hash routing (`#/citychain/...`).
   - Artifacts are baked from `artifacts/*` during deploy.
   - Snowtrace/Fuji verification remains canonical for on-chain proof.
 
@@ -77,8 +90,8 @@ See: `docs/challenges/avalanche-build-games/pitch-proof-matrix.md`
 ## Submission Metadata
 - Source repo: `https://github.com/stabletown-xyz/stabletown`
 - Source ref: `HEAD`
-- Source sha: `ce74e60e2ea0ab6843d928d6ad8e887adc6d025b`
-- Exported at (UTC): `2026-03-10T05:04:53Z`
+- Source sha: `8e7ee359fb3ebac548ffe99d9a2a52aa482eafa3`
+- Exported at (UTC): `2026-03-10T05:08:41Z`
 - Track: Avalanche Build Games (Infrastructure)
 - Submission mirror: `https://github.com/stabletown-xyz/citychain-build-games`
 - Walkthrough video (required): `https://www.loom.com/share/d00a099516ae462895f74dac5eeefdff`

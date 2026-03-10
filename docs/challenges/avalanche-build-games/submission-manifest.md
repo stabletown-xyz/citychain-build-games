@@ -1,9 +1,14 @@
 # Avalanche Build Games Submission Manifest
 
-- Last updated: 2026-03-06
+- Last updated: 2026-03-09
 - Track: Avalanche Build Games (Infrastructure)
 - Scope: CityChain Kit demoability upgrade (strict proof + 3 quest loops + validator/embed + explorer-link/hash evidence)
 - Primary demo surface: `/citychain/smallville` with proof-authoritative handoff to `/citychain/judge`
+
+## Fast review path
+1. Run: `./scripts/verify_submission_bundle.sh`
+2. Open: `docs/challenges/avalanche-build-games/judge-quick-proof.md`
+3. Optional UX context: `https://stabletown-xyz.github.io/citychain-build-games/#/citychain/smallville`
 
 ## Package artifacts
 - Description: `00-description-100-words.md`
