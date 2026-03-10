@@ -1,27 +1,27 @@
 {
-  "generated_at": "2026-03-06T03:49:15Z",
+  "generated_at": "2026-03-10T04:56:34Z",
   "explorer_base_url": "https://testnet.snowtrace.io",
   "links": {
     "contracts": {
-      "institution_registry": "https://testnet.snowtrace.io/address/0xb3062725E2Cb77fe0C66B26A72c1B1b40Da32821",
-      "merchant_registry": "https://testnet.snowtrace.io/address/0x14bd0d4AeBD4ee23E7Bcf12E816eb5e151a0B36a",
-      "quest_manager": "https://testnet.snowtrace.io/address/0xBBBFF8451a548a6A75CaCb8e26eFfCA03374DD6A",
-      "attestation_verifier": "https://testnet.snowtrace.io/address/0x2b59D4a26b79Bf705E25bEAdca515aC244bBEf03",
-      "rewards_token": "https://testnet.snowtrace.io/address/0xFc8f121463a0c726b1100F9dAdc370d4711F9e53",
-      "redemption": "https://testnet.snowtrace.io/address/0x3cA5C1D61C14bd071a26e6616597D1b5950bc2ed"
+      "institution_registry": "https://testnet.snowtrace.io/address/0xC3c7A1E67501625d2B5c7126D81a53Dd1bF837CA",
+      "merchant_registry": "https://testnet.snowtrace.io/address/0xc91504e820a991769D0c80FB6c8aD4CD47fA1C31",
+      "quest_manager": "https://testnet.snowtrace.io/address/0xeD55796E4B79d051AAEbFFEc45C22E67d07524E9",
+      "attestation_verifier": "https://testnet.snowtrace.io/address/0x9731379eEa6F78d7B333A5E73C70025dE32806AA",
+      "rewards_token": "https://testnet.snowtrace.io/address/0xC4E759EA78617DFaf6c9cCA641cbea27E56F7c25",
+      "redemption": "https://testnet.snowtrace.io/address/0x0a63d49f1501e7c60cC0d2f3156186b7ad0Cb0cf"
     },
     "txs": {
       "deploy": {
-        "institution_registry": "https://testnet.snowtrace.io/tx/0xfb921b42b15f97abf174e03e02ce05b2196101fa7e97ed78df58cb01c34b4c83",
-        "merchant_registry": "https://testnet.snowtrace.io/tx/0x24ccc3313d1e4a9d04426e3b7abd5f01f36fcfc0f217a6ee5f21a174cd944615",
-        "quest_manager": "https://testnet.snowtrace.io/tx/0xc0d83e67ed9d9b72863382890aaa8a00c09deb2c600e1bc51d21df97e6b51f02",
-        "attestation_verifier": "https://testnet.snowtrace.io/tx/0xc3e99707a4fe1f809bc906e84557e74178d3b08eedbe28c1236c89099ea97484",
-        "rewards_token": "https://testnet.snowtrace.io/tx/0xc8602ffc14ed806eb5c022596cf42fa101859af4cc2a78381ad6f696c004fede",
-        "redemption": "https://testnet.snowtrace.io/tx/0x8c779f86c70fc34a813476fb8682f71ab5aeac90992122036d1b91dc90060bf7"
+        "institution_registry": "https://testnet.snowtrace.io/tx/0x68d65df1874a9ae49640e672185c2a6424f8f8cb19ba10681ea8ce7223401689",
+        "merchant_registry": "https://testnet.snowtrace.io/tx/0x32a569915eb706e0fb77ceaae8e3c95e2850aafca99fd3b12c92b081b13b6c06",
+        "quest_manager": "https://testnet.snowtrace.io/tx/0x761864fbcbb88d7dbe163412b6b81a0493ac543bcc41d85b8e435dd829fa8d5e",
+        "attestation_verifier": "https://testnet.snowtrace.io/tx/0xd2132f8b22801ef52b3a74b1db239576704d24a07550f656dcb5d56ab633c094",
+        "rewards_token": "https://testnet.snowtrace.io/tx/0x175889c6264d330dd5a3ebf36121bfa0d942b547132e07fa3d19840f01e9b17f",
+        "redemption": "https://testnet.snowtrace.io/tx/0xa4b1f4861747e3597f6467748047541f3a02baad95fb5d09fc37cd88b4062f08"
       },
       "flow": {
-        "quest_claim": "https://testnet.snowtrace.io/tx/0x9020b70bf46ec089af66626b758fe077c0bb521232af6dac805b2ace95cdb356",
-        "redemption_chain_settlement": "https://testnet.snowtrace.io/tx/0xdc39b181232e0502d94db1c95d9b05898f2ef4625738122ac7102b730de28231"
+        "quest_claim": "https://testnet.snowtrace.io/tx/0x2d580cc22a8ec44b16e2025df9aea38e7e3a314c28c4af468771a10d08cf8d76",
+        "redemption_chain_settlement": "https://testnet.snowtrace.io/tx/0x6450e060de1e709fc8aaeac704f08ed3bb8efa20b691cc632a9663f2b3369b5b"
       }
     }
   }

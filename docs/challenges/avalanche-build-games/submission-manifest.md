@@ -45,7 +45,7 @@ scripts/challenges/run_citychain_judge_demo.sh
 - Live MVP site (GitHub Pages):
   - `https://stabletown-xyz.github.io/citychain-build-games/`
 - Walkthrough video (required by Stage 2):
-  - `REPLACE_WITH_WALKTHROUGH_VIDEO_URL`
+  - `https://www.loom.com/share/d00a099516ae462895f74dac5eeefdff`
 - Demo walkthrough script:
   - `https://github.com/stabletown-xyz/citychain-build-games/blob/main/docs/challenges/avalanche-build-games/demo-script.md`
 - Judge quick proof:
@@ -57,8 +57,8 @@ scripts/challenges/run_citychain_judge_demo.sh
 - Submission manifest:
   - `https://github.com/stabletown-xyz/citychain-build-games/blob/main/docs/challenges/avalanche-build-games/submission-manifest.md`
 - Live MVP route pointers:
-  - `https://stabletown-xyz.github.io/citychain-build-games/citychain/smallville`
-  - `https://stabletown-xyz.github.io/citychain-build-games/citychain/judge`
+  - `https://stabletown-xyz.github.io/citychain-build-games/#/citychain/smallville`
+  - `https://stabletown-xyz.github.io/citychain-build-games/#/citychain/judge`
 
 ## Latest closure run (America/Denver)
 

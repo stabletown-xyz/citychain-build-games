@@ -30,8 +30,8 @@ Narrative route order:
 
 ## Live MVP Site (GitHub Pages)
 - URL: `https://stabletown-xyz.github.io/citychain-build-games/`
-- Primary lane: `https://stabletown-xyz.github.io/citychain-build-games/citychain/smallville`
-- Proof lane: `https://stabletown-xyz.github.io/citychain-build-games/citychain/judge`
+- Primary lane: `https://stabletown-xyz.github.io/citychain-build-games/#/citychain/smallville`
+- Proof lane: `https://stabletown-xyz.github.io/citychain-build-games/#/citychain/judge`
 - Notes:
   - Artifacts are baked from `artifacts/*` during deploy.
   - Snowtrace/Fuji verification remains canonical for on-chain proof.
@@ -77,13 +77,13 @@ See: `docs/challenges/avalanche-build-games/pitch-proof-matrix.md`
 ## Submission Metadata
 - Source repo: `https://github.com/stabletown-xyz/stabletown`
 - Source ref: `HEAD`
-- Source sha: `954a93c4dc75d0dbbaae14933a16d2e0acccb75d`
-- Exported at (UTC): `2026-03-10T04:02:36Z`
+- Source sha: `ce74e60e2ea0ab6843d928d6ad8e887adc6d025b`
+- Exported at (UTC): `2026-03-10T05:04:53Z`
 - Track: Avalanche Build Games (Infrastructure)
 - Submission mirror: `https://github.com/stabletown-xyz/citychain-build-games`
-- Walkthrough video (required): `REPLACE_WITH_WALKTHROUGH_VIDEO_URL`
+- Walkthrough video (required): `https://www.loom.com/share/d00a099516ae462895f74dac5eeefdff`
 - Judge quick proof: `https://github.com/stabletown-xyz/citychain-build-games/blob/main/docs/challenges/avalanche-build-games/judge-quick-proof.md`
 - Demo walkthrough script: `https://github.com/stabletown-xyz/citychain-build-games/blob/main/docs/challenges/avalanche-build-games/demo-script.md`
 - Runbook: `https://github.com/stabletown-xyz/citychain-build-games/blob/main/docs/challenges/avalanche-build-games/runbook.md`
 - Submission manifest: `https://github.com/stabletown-xyz/citychain-build-games/blob/main/docs/challenges/avalanche-build-games/submission-manifest.md`
-- Optional live MVP URL: `NOT_DEPLOYED_IN_THIS_CUT`
+- Optional live MVP URL: `https://stabletown-xyz.github.io/citychain-build-games/`

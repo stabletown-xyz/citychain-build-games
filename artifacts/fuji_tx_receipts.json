@@ -1,50 +1,50 @@
 {
-  "generated_at": "2026-03-06T03:49:15Z",
+  "generated_at": "2026-03-10T04:56:34Z",
   "network": "fuji",
   "evm_chain_id": 43113,
   "deploy_receipts": {
     "institution_registry": {
       "status": "confirmed",
-      "block_number": 52406557,
+      "block_number": 52559494,
       "gas_used": "317663"
     },
     "merchant_registry": {
       "status": "confirmed",
-      "block_number": 52406559,
+      "block_number": 52559495,
       "gas_used": "314997"
     },
     "quest_manager": {
       "status": "confirmed",
-      "block_number": 52406560,
+      "block_number": 52559496,
       "gas_used": "528610"
     },
     "attestation_verifier": {
       "status": "confirmed",
-      "block_number": 52406563,
+      "block_number": 52559498,
       "gas_used": "295870"
     },
     "rewards_token": {
       "status": "confirmed",
-      "block_number": 52406565,
+      "block_number": 52559500,
       "gas_used": "627926"
     },
     "redemption": {
       "status": "confirmed",
-      "block_number": 52406567,
+      "block_number": 52559502,
       "gas_used": "393983"
     }
   },
   "flow_receipts": {
     "quest_claim": {
-      "tx_hash": "0x9020b70bf46ec089af66626b758fe077c0bb521232af6dac805b2ace95cdb356",
+      "tx_hash": "0x2d580cc22a8ec44b16e2025df9aea38e7e3a314c28c4af468771a10d08cf8d76",
       "status": "confirmed",
-      "block_number": 52406584,
+      "block_number": 52559513,
       "gas_used": "71805"
     },
     "redemption_chain_settlement": {
-      "tx_hash": "0xdc39b181232e0502d94db1c95d9b05898f2ef4625738122ac7102b730de28231",
+      "tx_hash": "0x6450e060de1e709fc8aaeac704f08ed3bb8efa20b691cc632a9663f2b3369b5b",
       "status": "confirmed",
-      "block_number": 52406587,
+      "block_number": 52559516,
       "gas_used": "53118"
     }
   }
