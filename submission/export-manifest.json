@@ -1,8 +1,8 @@
 {
   "source_repo_url": "https://github.com/stabletown-xyz/stabletown",
   "source_ref": "HEAD",
-  "source_sha": "8e7ee359fb3ebac548ffe99d9a2a52aa482eafa3",
-  "exported_at": "2026-03-10T05:08:41Z",
+  "source_sha": "05a123817b96eb0e6bea8fb9d39c7c032f6ff7bb",
+  "exported_at": "2026-03-10T05:19:49Z",
   "mode": "sync",
   "strict_artifacts": "required",
   "includes": [

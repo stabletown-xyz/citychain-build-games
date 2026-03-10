@@ -1,6 +1,6 @@
 # Avalanche Build Games Submission Manifest
 
-- Last updated: 2026-03-09
+- Last updated: 2026-03-10
 - Track: Avalanche Build Games (Infrastructure)
 - Scope: CityChain Kit demoability upgrade (strict proof + 3 quest loops + validator/embed + explorer-link/hash evidence)
 - Primary demo surface: `/citychain/smallville` with proof-authoritative handoff to `/citychain/judge`
@@ -67,6 +67,10 @@ scripts/challenges/run_citychain_judge_demo.sh
 
 ## Latest closure run (America/Denver)
 
+- 2026-03-09 22:17:52 MST: strict judge bundle command passed with latest aligned Fuji artifacts.
+  - Command: `PORT=4001 CITYCHAIN_RUN_LOCAL_L1=0 CITYCHAIN_RECORDING_READY=0 CITYCHAIN_STRICT=1 CITYCHAIN_NETWORK=fuji ./scripts/challenges/run_citychain_judge_demo.sh`
+  - Bundle file: `chainkit/out/citychain_judge_demo_bundle.json`
+  - Observed: strict summary + bundle + explorer links now align to the same run.
 - 2026-03-05 14:27:20 MST: deterministic command passed.
   - Command: `./scripts/challenges/smoke_avalanche_build_games.sh`
 - 2026-03-05 14:53:25 MST: strict command passed with Fuji on-chain proof.
@@ -119,11 +123,11 @@ Artifact files:
 
 ### Latest strict explorer links
 - Contract (`quest_manager`):
-  - `https://testnet.snowtrace.io/address/0xBBBFF8451a548a6A75CaCb8e26eFfCA03374DD6A`
+  - `https://testnet.snowtrace.io/address/0xAB6b6C90cfAfA081E8c2F62a6Eb09B87cba6aDFA`
 - Flow tx (`quest_claim`):
-  - `https://testnet.snowtrace.io/tx/0x9020b70bf46ec089af66626b758fe077c0bb521232af6dac805b2ace95cdb356`
+  - `https://testnet.snowtrace.io/tx/0x505635491c67230b72d5b8e30ca944345b98009d81414ea7a08bac012fe37bf7`
 - Flow tx (`redemption_chain_settlement`):
-  - `https://testnet.snowtrace.io/tx/0xdc39b181232e0502d94db1c95d9b05898f2ef4625738122ac7102b730de28231`
+  - `https://testnet.snowtrace.io/tx/0xfc00fba038ed552c9f8def37b6ca9e203a161e9a82c89ebc3f2e6bd9240ad7ea`
 
 ## Platform integrity checks
 - Tenant-scoped API writes

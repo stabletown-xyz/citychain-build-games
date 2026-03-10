@@ -27,11 +27,11 @@ From `artifacts/citychain_judge_demo_bundle.json` confirm:
 ## 3) Open the three required Snowtrace proofs
 
 - Contract page:
-  - `https://testnet.snowtrace.io/address/0xBBBFF8451a548a6A75CaCb8e26eFfCA03374DD6A`
+  - `https://testnet.snowtrace.io/address/0xAB6b6C90cfAfA081E8c2F62a6Eb09B87cba6aDFA`
 - Quest claim tx:
-  - `https://testnet.snowtrace.io/tx/0x9020b70bf46ec089af66626b758fe077c0bb521232af6dac805b2ace95cdb356`
+  - `https://testnet.snowtrace.io/tx/0x505635491c67230b72d5b8e30ca944345b98009d81414ea7a08bac012fe37bf7`
 - Redemption settlement tx:
-  - `https://testnet.snowtrace.io/tx/0xdc39b181232e0502d94db1c95d9b05898f2ef4625738122ac7102b730de28231`
+  - `https://testnet.snowtrace.io/tx/0xfc00fba038ed552c9f8def37b6ca9e203a161e9a82c89ebc3f2e6bd9240ad7ea`
 
 ## 4) Optional UX context
 

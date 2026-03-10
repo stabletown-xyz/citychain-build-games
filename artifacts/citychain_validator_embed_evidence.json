@@ -1,11 +1,11 @@
 {
-  "captured_at": "2026-03-06T03:48:16Z",
+  "captured_at": "2026-03-10T05:16:52Z",
   "chain_id": "11111111-1111-4111-8111-11111111111a",
   "embed": {
-    "embed_session_id": "58d73d99-c359-4f6f-9ada-d0d7eb05d46d",
+    "embed_session_id": "bf106a15-3dd0-4816-82a3-9898e1586237",
     "embedded_client_id": "b3240b39-581a-4957-8cc1-6c17ad023fe6",
-    "expires_at": "2026-03-06T04:48:16.000000Z",
-    "partner_api_key_id": "305258d1-b5e9-46de-afc5-8a458d3cd36a",
+    "expires_at": "2026-03-10T06:16:52.000000Z",
+    "partner_api_key_id": "8c6458d7-f9b3-4259-b541-c01198aca897",
     "partner_organization_id": "ab7088fe-e75f-45d7-8dfe-9d46e5192429",
     "status": "active"
   },

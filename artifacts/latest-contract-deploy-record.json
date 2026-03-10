@@ -3,50 +3,50 @@
   "chain_id": 43113,
   "admin": "0xDb26c8BD1ceB5c07221FF80Fba551A4754c2CF98",
   "contracts": {
-    "institution_registry": "0xC3c7A1E67501625d2B5c7126D81a53Dd1bF837CA",
-    "merchant_registry": "0xc91504e820a991769D0c80FB6c8aD4CD47fA1C31",
-    "quest_manager": "0xeD55796E4B79d051AAEbFFEc45C22E67d07524E9",
-    "attestation_verifier": "0x9731379eEa6F78d7B333A5E73C70025dE32806AA",
-    "rewards_token": "0xC4E759EA78617DFaf6c9cCA641cbea27E56F7c25",
-    "redemption": "0x0a63d49f1501e7c60cC0d2f3156186b7ad0Cb0cf"
+    "institution_registry": "0x05674D200DA856a693d2e2Bace94E082b44CE38c",
+    "merchant_registry": "0x787E7b86C5026C7Ab7EFA4EE265Ee4E9c1dF7B12",
+    "quest_manager": "0xAB6b6C90cfAfA081E8c2F62a6Eb09B87cba6aDFA",
+    "attestation_verifier": "0x418d77db9C737f20a031EfAC26312C6fB98027EF",
+    "rewards_token": "0xBa46bC8e3e210ae47973a320cc5d286008e3dF63",
+    "redemption": "0xF10B256f416b73001d21D7B5bD40972aa1F4CF64"
   },
   "deploy_tx_hashes": {
-    "institution_registry": "0x68d65df1874a9ae49640e672185c2a6424f8f8cb19ba10681ea8ce7223401689",
-    "merchant_registry": "0x32a569915eb706e0fb77ceaae8e3c95e2850aafca99fd3b12c92b081b13b6c06",
-    "quest_manager": "0x761864fbcbb88d7dbe163412b6b81a0493ac543bcc41d85b8e435dd829fa8d5e",
-    "attestation_verifier": "0xd2132f8b22801ef52b3a74b1db239576704d24a07550f656dcb5d56ab633c094",
-    "rewards_token": "0x175889c6264d330dd5a3ebf36121bfa0d942b547132e07fa3d19840f01e9b17f",
-    "redemption": "0xa4b1f4861747e3597f6467748047541f3a02baad95fb5d09fc37cd88b4062f08"
+    "institution_registry": "0x87590694982678082b25079f56bb3a47c7c5d3b6ffdfcfccda08f03320133f3e",
+    "merchant_registry": "0xac8d091156cd34212004954b56b6c5b329e044cd4e3b41d2b02c0ac8c312fa6a",
+    "quest_manager": "0xea2e9a1852e6ca77ed28ef108d98d73de2fc2064f39b8d9b89afa1d456fc6d7b",
+    "attestation_verifier": "0x183329f77d4a960ff86f248f279059854f19c197e0a4b84979387d7564300465",
+    "rewards_token": "0x2b65f611d7db2d87bb7c9b6dcf0f54d8e8bdac297b46496a23c60b8d40788f78",
+    "redemption": "0xc7335a3adc0f17f9d4772a01fc4063c59b4d4c0008a0e56a6579fe4f8c3ba0a8"
   },
   "deploy_receipts": {
     "institution_registry": {
       "status": "confirmed",
-      "block_number": 52559494,
+      "block_number": 52559949,
       "gas_used": "317663"
     },
     "merchant_registry": {
       "status": "confirmed",
-      "block_number": 52559495,
+      "block_number": 52559951,
       "gas_used": "314997"
     },
     "quest_manager": {
       "status": "confirmed",
-      "block_number": 52559496,
+      "block_number": 52559953,
       "gas_used": "528610"
     },
     "attestation_verifier": {
       "status": "confirmed",
-      "block_number": 52559498,
+      "block_number": 52559954,
       "gas_used": "295870"
     },
     "rewards_token": {
       "status": "confirmed",
-      "block_number": 52559500,
+      "block_number": 52559955,
       "gas_used": "627926"
     },
     "redemption": {
       "status": "confirmed",
-      "block_number": 52559502,
+      "block_number": 52559957,
       "gas_used": "393983"
     }
   }

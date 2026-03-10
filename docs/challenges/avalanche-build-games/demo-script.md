@@ -46,17 +46,17 @@
 2. `0:20-1:40` Run `/citychain/smallville` end-to-end civic storyline.
 3. `1:40-3:10` Run `/citychain/judge` one-click flow and show tx finality.
 4. `3:10-4:00` Show Snowtrace triplet:
-   - contract: `0xBBBFF8451a548a6A75CaCb8e26eFfCA03374DD6A`
-   - claim tx: `0x9020b70bf46ec089af66626b758fe077c0bb521232af6dac805b2ace95cdb356`
-   - settlement tx: `0xdc39b181232e0502d94db1c95d9b05898f2ef4625738122ac7102b730de28231`
+   - contract: `0xAB6b6C90cfAfA081E8c2F62a6Eb09B87cba6aDFA`
+   - claim tx: `0x505635491c67230b72d5b8e30ca944345b98009d81414ea7a08bac012fe37bf7`
+   - settlement tx: `0xfc00fba038ed552c9f8def37b6ca9e203a161e9a82c89ebc3f2e6bd9240ad7ea`
 5. `4:00-4:40` Run `./scripts/verify_submission_bundle.sh` and open `artifacts/citychain_judge_demo_bundle.json`.
 6. `4:40-5:00` Close on repeatability via `scripts/challenges/launch_citychain_city.sh`.
 
 ## On-screen proof overlays (exact values)
 - `evm_chain_id=43113`
-- `contract_address=0xBBBFF8451a548a6A75CaCb8e26eFfCA03374DD6A`
-- `quest_claim_tx=0x9020b70bf46ec089af66626b758fe077c0bb521232af6dac805b2ace95cdb356`
-- `redemption_chain_settlement_tx=0xdc39b181232e0502d94db1c95d9b05898f2ef4625738122ac7102b730de28231`
+- `contract_address=0xAB6b6C90cfAfA081E8c2F62a6Eb09B87cba6aDFA`
+- `quest_claim_tx=0x505635491c67230b72d5b8e30ca944345b98009d81414ea7a08bac012fe37bf7`
+- `redemption_chain_settlement_tx=0xfc00fba038ed552c9f8def37b6ca9e203a161e9a82c89ebc3f2e6bd9240ad7ea`
 
 ## 3) Strict winner-proof pass (mandatory for final judging evidence)
 1. `CITYCHAIN_STRICT=1 chainkit/bootstrap.sh --network fuji`
