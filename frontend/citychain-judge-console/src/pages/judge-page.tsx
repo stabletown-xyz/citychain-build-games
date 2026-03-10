@@ -58,7 +58,9 @@ export function JudgePage() {
   const [threeLoop, setThreeLoop] = useState<ThreeLoopEvidence | null>(null);
   const [validatorEmbed, setValidatorEmbed] = useState<ValidatorEmbedEvidence | null>(null);
   const [completedStepIds, setCompletedStepIds] = useState<string[]>([]);
-  const [statusLine, setStatusLine] = useState<string>("Run the guided steps top-to-bottom.");
+  const [statusLine, setStatusLine] = useState<string>(
+    "Run one-click guided demo to validate strict artifacts and Snowtrace proof links.",
+  );
 
   useEffect(() => {
     void loadBootstrapSummary().then(setSummary);
@@ -125,14 +127,20 @@ export function JudgePage() {
   const strictClaimReceiptConfirmed = flowReceipts.quest_claim?.status === "confirmed";
   const strictSettlementReceiptConfirmed = flowReceipts.redemption_chain_settlement?.status === "confirmed";
   const hasTxIntentRecords = claims.length > 0 || !!settlement;
-  const txFinalityReady = hasTxIntentRecords
-    ? claimsConfirmedCount >= 3 && settlementConfirmed
-    : strictClaimReceiptConfirmed && strictSettlementReceiptConfirmed;
-  const txFinalityDetail = hasTxIntentRecords
+  const txIntentFinalityReady = claimsConfirmedCount >= 3 && settlementConfirmed;
+  const strictFlowFinalityReady = strictClaimReceiptConfirmed && strictSettlementReceiptConfirmed;
+  const txFinalityReady = txIntentFinalityReady || strictFlowFinalityReady;
+  const txFinalityDetail = txIntentFinalityReady
     ? `claims_confirmed=${claimsConfirmedCount}/3, settlement=${settlement?.status || "missing"}`
-    : `tx-intent records unavailable in mirror; strict receipts claim=${flowReceipts.quest_claim?.status || "missing"}, settlement=${
-        flowReceipts.redemption_chain_settlement?.status || "missing"
-      }`;
+    : strictFlowFinalityReady
+      ? `strict flow receipts confirmed (claim=${flowReceipts.quest_claim?.status || "n/a"}, settlement=${
+          flowReceipts.redemption_chain_settlement?.status || "n/a"
+        })`
+      : hasTxIntentRecords
+        ? `claims_confirmed=${claimsConfirmedCount}/3, settlement=${settlement?.status || "missing"}`
+        : `tx-intent records unavailable in mirror; strict receipts claim=${flowReceipts.quest_claim?.status || "missing"}, settlement=${
+            flowReceipts.redemption_chain_settlement?.status || "missing"
+          }`;
   const attachedSlots = useMemo(
     () => new Set((bundle?.required_slots || []).filter((slot) => slot.attached).map((slot) => slot.slot)),
     [bundle?.required_slots],
@@ -251,7 +259,7 @@ export function JudgePage() {
     setStatusLine(`Step complete: ${step.title}`);
   };
 
-  const autoRun = () => {
+  const runOneClickGuidedDemo = () => {
     const nextCompleted = [...completedStepIds];
     const nextSet = new Set(nextCompleted);
 
@@ -275,7 +283,7 @@ export function JudgePage() {
     }
 
     setCompletedStepIds(nextCompleted);
-    setStatusLine("Guided walkthrough complete. Evidence package is judge-ready.");
+    setStatusLine("One-click guided demo complete. Evidence package is judge-ready.");
   };
 
   const resetGuide = () => {
@@ -292,8 +300,8 @@ export function JudgePage() {
       </p>
 
       <div className="guide-toolbar">
-        <button className="guide-button" type="button" onClick={autoRun}>
-          Auto-run guided checks
+        <button className="guide-button" type="button" onClick={runOneClickGuidedDemo}>
+          Run one-click guided demo
         </button>
         <button className="guide-button guide-button-secondary" type="button" onClick={resetGuide}>
           Reset guide
@@ -406,6 +414,23 @@ export function JudgePage() {
           )}
         </li>
       </ul>
+      <div className="guide-toolbar">
+        {contractUrl ? (
+          <a className="guide-button" href={contractUrl} target="_blank" rel="noreferrer">
+            Open contract proof
+          </a>
+        ) : null}
+        {claimUrl ? (
+          <a className="guide-button" href={claimUrl} target="_blank" rel="noreferrer">
+            Open claim tx proof
+          </a>
+        ) : null}
+        {settlementUrl ? (
+          <a className="guide-button" href={settlementUrl} target="_blank" rel="noreferrer">
+            Open settlement tx proof
+          </a>
+        ) : null}
+      </div>
 
       <h3>Judge handoff</h3>
       <p>
